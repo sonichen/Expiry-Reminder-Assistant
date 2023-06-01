@@ -1,0 +1,7 @@
+<!--pages/advice/advice.wxml-->
+<view class="textbox">
+<textarea class="text" placeholder="请输入您的意见与反馈" auto-height="true" bindinput="remarkInputAction"  maxlength='-1' auto-focus="true">
+</textarea>
+</view>
+
+<button class="btn" bindtap="ifsend">发送</button>

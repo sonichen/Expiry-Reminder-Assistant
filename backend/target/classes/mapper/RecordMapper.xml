@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyj.mapper.RecordMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.cyj.pojo.Record">
+                    <result column="id" property="id"/>
+                    <result column="userId" property="userId"/>
+                    <result column="itemName" property="itemName"/>
+                    <result column="closeTask" property="closeTask"/>
+                    <result column="closeTime" property="closeTime"/>
+                    <result column="expireTask" property="expireTask"/>
+                    <result column="expireTime" property="expireTime"/>
+                    <result column="image" property="image"/>
+                    <result column="description" property="description"/>
+                    <result column="deleted" property="deleted"/>
+                    <result column="create_time" property="createTime"/>
+                    <result column="update_time" property="updateTime"/>
+                    <result column="state" property="state"></result>
+                    <result column="categoriesId" property="categoriesId"></result>
+            <result column="categoriesName" property="categoriesName"></result>
+            <result column="timeGap" property="timeGap"></result>
+
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, userId, itemName, closeTask, closeTime, expireTask, expireTime, image, description, deleted, create_time, update_time,state,categoriesId,timeGap
+        </sql>
+        <select id="queryRecords" resultType="com.cyj.pojo.Record" parameterType="string">
+            SELECT * FROM `record`
+            WHERE `record`.`userId`=#{userId}
+              AND
+                `record`.`state`=#{state}
+              and deleted=0
+        </select>
+        <select id="queryCountsByCategoriesId" parameterType="long" resultType="long">
+            SELECT COUNT(*) FROM `record`
+            WHERE `record`.`categoriesId`=#{categoriesId}
+
+        </select>
+
+    <select id="queryRecordsByKeywords" parameterType="string"  resultType="com.cyj.pojo.Record" >
+        SELECT * FROM `record`
+        WHERE `record`.`itemName` like '%${itemName}%'
+          AND `record`.`userId`=#{userId}
+            and deleted=0
+    </select>
+    <select id="queryAllRecord" parameterType="string"  resultType="com.cyj.pojo.Record">
+        SELECT * FROM `record`
+        WHERE  `record`.`userId`=#{userId}
+
+    </select>
+</mapper>

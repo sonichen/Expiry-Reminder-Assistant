@@ -1,0 +1,101 @@
+<!--pages/home/home.wxml-->
+ <!--  搜索框  -->
+ <view class="container1"  bindtap="ClickSearch">
+    <view class="search" >
+            <input type='text' placeholder='输入要查找的物品' confirm-type='search' bindconfirm='query' ></input>
+            <image src='http://8.130.8.164:8080/img/re/resource/search.png'> </image>
+            
+    </view>
+    <view class="saoma">
+    <image src='http://8.130.8.164:8080/img/re/resource/scan.png'></image>
+    </view>
+</view>
+<!--  查找根据 -->
+
+<view class='select_box'>
+ <view class='select' catchtap='selectTap'>
+  <text class='select_text'>{{selectData[index]}}</text>
+  <image class='select_img {{show&&"select_img_rotate"}}' src='http://8.130.8.164:8080/img/re/resource/drop-down.png'></image>   
+ </view>
+ <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+  <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+ </view>
+</view>
+
+
+
+
+ <!--  -------------------logo和添加--------------  -->
+ <view wx:if="{{allthing.length==0}}">
+<image class="logo" src='http://8.130.8.164:8080/img/re/resource/984824586556280832.jpg'></image>
+<view class="text">当前还没有物品记录，快去添加吧~</view>
+<button class="btn" bindtap="gotoadd">去添加</button>
+</view>
+
+
+<!--  -----------------物品提醒样式-按状态时间--------------  -->
+<!---------红色-----  -->
+
+<view class="box" wx:elif="{{state==1}}" >
+    <text class="text1">已过期</text>
+    <view wx:for="{{List}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+         <view class="outdate" >
+             <text class="mtrltext">{{item.itemName}}</text>
+
+             <view class="texticon">
+             <text class="mtrltext">已过期{{item.timeGap}}天</text>
+              <!--删除-->
+             <image src="http://8.130.8.164:8080/img/re/resource/983304034666549248.jpg" class="image" data-id="{{item.id}}" id="{{item.id}}" bindtap = "delOption" ></image>
+              </view>
+
+        </view>
+    </view>
+</view>
+
+<!---------黄色-----  -->
+<view  class="box" wx:elif="{{state==2}}">
+    <text class="text2">即将过期</text>
+    <view class="willoutdate" wx:for="{{List}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+        <text class="mtrltext">{{item.itemName}}</text>
+
+        <view class="texticon">
+        <text class="mtrltext">距离过期还有{{item.timeGap}}天</text>
+         <!--删除-->
+        <image src="http://8.130.8.164:8080/img/re/resource/983304034666549248.jpg" class="image" data-id="{{item.id}}" id="{{item.id}}" bindtap = "delOption" ></image>
+        </view>
+
+    </view>
+</view>
+
+<!---------绿色-----  -->
+<view  class="box" wx:elif="{{state==0}}" >
+    <text class="text3">未过期</text>
+    <view class="indate" wx:for="{{List}}" wx:for-item="item" wx:for-index="index" wx:key="that" >
+        <text class="mtrltext">{{item.itemName}}</text>
+
+         <view class="texticon">
+        <text class="mtrltext">距离过期还有{{item.timeGap}}天</text>
+        <!--删除-->
+        <image src="http://8.130.8.164:8080/img/re/resource/983304034666549248.jpg" class="image" data-id="{{item.id}}" id="{{item.id}}" bindtap = "delOption" ></image>
+         </view>
+
+    </view>
+  </view>
+
+
+
+
+
+<!--  -----------------物品提醒样式-按类别--------------  -->
+<!---------蓝色-----  -->
+<view >
+
+</view>
+<!---------橙色-----  -->
+<view>
+
+</view>
+<!---------紫色-----  -->
+<view >
+
+</view>

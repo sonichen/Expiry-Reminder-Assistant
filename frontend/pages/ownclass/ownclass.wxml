@@ -1,0 +1,9 @@
+<!--pages/ownclass/ownclass.wxml-->
+
+<view class="hang">
+<text class="text">类别名称</text>
+<input placeholder="填写类别名称" auto-focus="true" bindinput="getCategoriesName">{{name}}</input>
+</view>
+
+
+<button class="btn" bindtap="gotomnm">保存</button>

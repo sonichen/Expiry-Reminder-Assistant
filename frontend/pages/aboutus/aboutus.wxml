@@ -1,0 +1,9 @@
+<!--pages/aboutus/aboutus.wxml-->
+
+<view wx:for="{{list}}" wx:key="index">
+      <view >
+        <text class="text">{{item.content}}</text>
+      </view>
+</view>
+
+

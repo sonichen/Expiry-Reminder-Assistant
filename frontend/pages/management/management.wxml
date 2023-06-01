@@ -1,0 +1,40 @@
+<!--pages/management/management.wxml-->
+<view class="text">默认分类</view>
+<view class="mgmt">
+    <view class="box">
+    <image src="http://8.130.8.164:8080/img/re/resource/medicine.png"></image>
+    <image src="http://8.130.8.164:8080/img/re/resource/food.png"></image>
+    <image src="http://8.130.8.164:8080/img/re/resource/cosmetics.png"></image>
+    <image src="http://8.130.8.164:8080/img/re/resource/drink.png"></image>
+    <image src="http://8.130.8.164:8080/img/re/resource/sports.png"></image>
+    </view>
+    <view class="box">
+    <text class="text2">药品</text>
+    <text class="text2">食品</text>
+    <text class="text2">化妆</text>
+    <text class="text2">饮料</text>
+    <text class="text2">运动</text>
+    </view>
+</view>
+
+<view class="text">自定义分类
+    <image src="http://8.130.8.164:8080/img/re/resource/create.png" class="image" bindtap='gotoownclass'></image>
+</view>
+
+<view  wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+<view class="mgmt2" >
+    <view class="quad">
+        <view >
+            <text class="text3">{{item.name}}</text>
+        </view>
+    </view>
+
+    <view class="icons">
+   
+    <!--删除-->
+    <image src="http://8.130.8.164:8080/img/re/resource/983304034666549248.jpg" class="image" data-id="{{item.id}}" id="{{item.id}}" bindtap = "delOption" ></image>
+    <!--创建-->
+    <image src="http://8.130.8.164:8080/img/re/resource/983303843288846336.jpg" class="image" bindtap='gotoownclass' ></image>
+    </view>
+</view>
+</view>

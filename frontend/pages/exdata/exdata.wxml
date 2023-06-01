@@ -1,0 +1,18 @@
+<!--pages/exdata/exdata.wxml-->
+<view class="tips">下拉框选择导出的分类，导出该分类的所有数据</view>
+
+<!--  下拉框 -->
+<view class='select_box'>
+ <view class='select' catchtap='selectTap'>
+  <text class='select_text'>{{value}}</text>
+  <image class='select_img {{show&&"select_img_rotate"}}' src='http://8.130.8.164:8080/img/re/resource/drop-down.png'></image>   
+ </view>
+ <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+  <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-value='{{item.name}}' data-id="{{item.id}}" id="{{item.id}}" catchtap='optionTap'>{{item.name}}</text>
+ </view>
+</view>
+
+
+<button class="btn" bindtap="ifex">导出</button>
+
+<view class="tips2">数据将发送至您的邮箱</view>

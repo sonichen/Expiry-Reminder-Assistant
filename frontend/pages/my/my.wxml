@@ -1,0 +1,41 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+    <image src="{{avatarUrl}}"></image>
+    <text class="text" bindtap="getUserProfile"> {{nickName}} </text>
+</view>
+
+<view class="my2" >
+    <view class="my3" bindtap="gotoguide">
+        <text class="text2">新人指南 </text>
+        <image src="http://8.130.8.164:8080/img/re/resource/right.png"></image>
+    </view>
+    
+    <view class="my3">
+        <text class="text2">每日随记 </text>
+        <image src="http://8.130.8.164:8080/img/re/resource/right.png"></image>
+    </view>
+    <view class="my3" bindtap="gotoadvice">
+        <text class="text2">意见与反馈 </text>
+        <image src="http://8.130.8.164:8080/img/re/resource/right.png"></image>
+    </view>
+    <view class="my3" bindtap="gotoabus" >
+        <text class="text2" >关于我们 </text>
+        <image src="http://8.130.8.164:8080/img/re/resource/right.png"></image>
+    </view>
+    <view class="my3" bindtap="gotoexdata">
+        <text class="text2">导出数据报表</text>
+        <image src="http://8.130.8.164:8080/img/re/resource/right.png"></image>
+    </view>
+</view>
+
+<view class="my2" bindtap="gotosetting">
+    <view class="my3">
+    <view class="my4" >
+        <image src="http://8.130.8.164:8080/img/re/resource/setting.png"></image>
+        <text class="text2" >设置</text>
+    </view>
+    <view ><image src="http://8.130.8.164:8080/img/re/resource/right.png" ></image></view>
+    </view>
+</view>
+
+

@@ -1,0 +1,86 @@
+/* pages/setting/setting.wxss */
+.contain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    width:750rpx;
+    height:60rpx;
+    background-color:#F1FFFD;
+    margin-top: 27rpx;
+}
+
+.text{
+    
+    color: #777A7A;
+    font-size:36rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left:28rpx;
+    margin-right:30rpx;
+}
+.text2{
+    color: #777A7A;
+    font-size:36rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left:60rpx;
+    margin-right:30rpx;
+  
+}
+
+ /* ---------------------------- */
+  /*模态框*/
+  .modal{position:fixed; top:0; right:0; bottom:0; left:0; z-index:1000;}
+  .modal-cancel{position:absolute; z-index:2000; top:0; right:0; bottom: 0; left:0; background:rgba(0,0,0,0.3);}
+  .bottom-dialog-body{width:100%; position:absolute; z-index:3000; bottom:0; left:0;background:#dfdede;}
+  /*动画前初始位置*/
+  .bottom-positon{-webkit-transform:translateY(100%);transform:translateY(100%);}
+   
+  /* 底部弹出框 */
+  .bottom-positon{
+    text-align: center;
+  }
+  .Mselect{
+    margin-bottom: 20rpx;
+
+  }
+  .Mselect view{
+    padding: 26rpx 0;
+    background: white;
+    border-radius: 15rpx;
+  }
+  .Mselect view:not(:last-of-type){
+    border-bottom: 1px solid #dfdede;
+  }
+  .Mcancel{
+    background: white;
+    padding: 26rpx 0;
+    border-radius: 15rpx;
+  }
+
+  .modeltext{
+    color:grey;
+    font-size:36rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.eye{
+    width:60rpx;
+    height:60rpx;
+    margin-right: 20rpx;
+}
+
+.btn{
+    height:70rpx;
+    background-color: #9CB8B3;
+    margin-top: 50rpx;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    line-height: 37rpx;
+    }

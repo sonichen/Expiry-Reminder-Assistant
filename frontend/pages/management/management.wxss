@@ -1,0 +1,98 @@
+/* pages/management/management.wxss */
+/* 大的绿框 */
+.mgmt{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    width:700rpx;
+    height:250rpx;
+    background-color: #9CB8B3;
+    margin-top: 27rpx;
+    margin-left:22rpx;
+    border-radius: 20rpx;
+}
+
+
+/* 小的绿框 */
+.mgmt2{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width:700rpx;
+    height:131rpx;
+    background-color: #9CB8B3;
+    margin-top: 27rpx;
+    margin-left:22rpx;
+    border-radius: 20rpx;
+}
+
+/* 大标题灰色字体 */
+.text{
+    font-size:40rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 25rpx;
+    margin-top: 56rpx;
+    color: #777A7A;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-right: 420rpx;
+}
+/* 默认分类 */
+.box{
+    width:700rpx;
+    margin-top: 0rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    
+}
+.mgmt image{
+    width:100rpx;
+    height:100rpx;
+}
+
+/* 自定义分类 */
+.quad{
+    width:100rpx;
+    height: 100rpx;
+    margin-top: 0rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+   
+    margin-left:22rpx;
+}
+
+
+.image{
+    width:60rpx;
+    height:60rpx;
+    margin-right:22rpx;
+}
+
+/* 白色名称字体 */
+.text2{
+    font-size:30rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -60rpx;
+    color: #FFFFFF;
+}
+
+/* 自定义分类的字体 */
+.text3{
+    font-size:30rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0rpx;
+    color:white;
+}
+
+/* 自定义里三个图标的排布 */
+.icons{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}

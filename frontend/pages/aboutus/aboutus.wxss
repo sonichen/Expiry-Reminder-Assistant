@@ -1,0 +1,23 @@
+/* pages/aboutus/aboutus.wxss */
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    width:750rpx;
+    height:600rpx;
+    background-color: white;
+    margin-top: 27rpx;
+    border-radius: 30rpx;
+    box-shadow:1px 1px 2px 2px whitesmoke;
+}
+.text{
+    display: flex;
+    flex-direction: row;
+    margin-top: 27rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    font-size:36rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #777A7A;
+}

@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "time-picker": "/pages/components/timePicker"
+    },
+    
+  
+    "navigationBarTitleText": "创建提醒"
+  
+     
+    
+}

@@ -1,0 +1,57 @@
+<!--pages/setting/setting.wxml-->
+<view class="contain">
+    <text class="text">用户名</text>
+    <input class="text" placeholder='请输入用户名' value='{{username}}'></input>
+</view>
+
+<view class="contain">
+    <text class="text">性别</text>
+    <input class="text" bindtap="showModal" placeholder='请选择性别' value='{{value}}'></input>
+</view>
+
+<!-- 性别选择下拉框  -->
+<view class="modal modal-bottom-dialog" hidden="{{hideFlag}}">
+    <view class="modal-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+      <!--  -->
+      <view class='Mselect'>
+        <view class="modeltext" wx:for="{{sexList}}"   wx:key="unique" data-value='{{item}}' bindtap='getOption'>
+          {{item}}
+        </view>
+      </view>
+      <view></view>
+      <view class='Mcancel' bindtap='mCancel'>
+        <text class="modeltext">取消</text>
+      </view>
+
+    </view>
+    
+</view>
+
+<!--个性签名-->
+<view class="contain">
+    <text class="text">个性签名</text>
+    <input class="text" placeholder="请输入个性签名"></input>
+</view>
+
+<!--加入时间-->
+<view class="contain">
+    <text class="text">加入时间</text>
+    <input class="text" placeholder='请输入' value='{{jointime}}'></input>
+</view>
+
+<!--手机号码-->
+<view class="contain">
+    <text class="text">手机号码</text>
+    <input class="text" placeholder='请输入手机号码' value='{{phonenumber}}'></input>
+</view>
+
+<!--邮箱-->
+<view class="contain">
+    <text class="text">邮箱</text>
+    <input class="text" placeholder="请输入邮箱号" value='{{email}}'></input>
+</view>
+
+
+
+<button class="btn" bindtap="issure">确定</button>

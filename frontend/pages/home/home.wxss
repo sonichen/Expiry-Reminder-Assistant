@@ -1,0 +1,241 @@
+/* pages/home/home.wxss */
+/* 第一行样式 */
+.container1{
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* 搜索框布局 */
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width:645rpx;
+    height:60rpx;
+    background-color:white;
+    border:2rpx solid whitesmoke;
+    border-radius: 15rpx;
+    margin-top: 44rpx;
+    margin-left:20rpx;
+}
+/* 搜索框提示文字样式 */
+.search input
+{
+  font-size:25rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:20rpx; 
+  
+}
+
+.search image{
+  width:50rpx;
+  height:50rpx;
+  padding-right:20rpx;
+}
+
+
+/* 扫码小图标 */
+.saoma
+{ 
+  margin-top: 48rpx;
+  margin-left:20rpx;
+}
+.saoma image{
+  width:50rpx;
+  height:50rpx;
+}
+.logo{
+    margin-top: 229rpx;
+    margin-left:247rpx;
+    width:250rpx;
+    height:250rpx;
+}
+
+
+/* 下拉框 */
+.select_box{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin-left: 538rpx;
+    margin-top: 10rpx;
+    background: #fff;
+    width:200rpx;
+    height:60rpx;
+    position: relative;
+    border:1px solid #efefef;
+   }
+   .select{
+    box-sizing: border-box;
+    width: 100%;
+    height: 60rpx;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+   }
+   .select_text{
+    color: #777A7A;
+    font-size:25rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left:20rpx; 
+   }
+   .select_img{
+    width: 40rpx;
+    height: 40rpx;
+    display: block;
+    transition:transform 0.3s;
+   }
+   .select_img_rotate{
+    transform:rotate(180deg); 
+   }
+   .option_box{
+    position: absolute;
+    top: 70rpx;
+    width: 100%;
+    border:1px solid #efefef;
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+   }
+   .option{
+    display: block;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;   
+    color: #777A7A;
+    font-size:25rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/* 排列依据 */
+.text{
+    font-size:32rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left:115rpx;
+    margin-top: 60rpx;
+    color: #777A7A;
+}
+.btn{
+    width:230rpx;
+    height:70rpx;
+    background-color: #9CB8B3;
+    margin-top: 30rpx;
+    color:white;
+    align-items: center;
+    justify-content: center;
+    line-height: 37rpx;
+    
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.text1{
+    font-size:36rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 22rpx;
+    margin-top: 0rpx;
+    color: #D17373;
+}
+.outdate{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width:700rpx;
+    height:100rpx;
+    margin-top: 20rpx;
+    margin-left: 22rpx;
+    border-radius: 20rpx;
+    background-color: #D17373;
+    
+}
+.mtrltext{
+    font-size:40rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 12rpx;
+    margin-right: 12rpx;
+    color:white
+}
+
+.text2{
+    font-size:36rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 22rpx;
+    margin-top: 40rpx;
+    color:#B5A75D;
+}
+
+.willoutdate{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width:700rpx;
+    height:100rpx;
+    margin-top: 20rpx;
+    margin-left: 22rpx;
+    border-radius: 20rpx;
+    background-color: #B5A75D;
+}
+
+.text3{
+    font-size:36rpx;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 22rpx;
+    margin-top: 40rpx;
+    color:#9CB8B3;
+}
+
+.list-item{
+    margin: 10rpx auto;
+    width: 700rpx;
+    height:130rpx;
+    position:relative;
+    
+  }
+
+.item-btns{
+    display:flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+.indate{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width:700rpx;
+    height:100rpx;
+    margin-top: 20rpx;
+    margin-left: 22rpx;
+    border-radius: 20rpx;
+    background:#9CB8B3;
+   
+    
+  }
+
+  .image{
+    width:60rpx;
+    height:60rpx;
+    margin-right:12rpx;
+}
+
+.texticon{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}

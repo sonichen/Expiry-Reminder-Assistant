@@ -1,0 +1,22 @@
+<!--pages/statistics/statistics.wxml-->
+<view>
+  <view class="container1">
+    <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
+<!-- 表格显示数据 -->
+<!--pages/index/index.wxml-->
+  <view class="table">
+    <view class="tr">
+        
+        <view class="th">分类</view>
+        <view class="th">数量</view>
+    </view>
+    <block wx:for="{{list}}" wx:key="item">
+        <view class="tr">
+           
+            <view class="td">{{item.name}}</view>
+            <view class="td">{{item.value}}</view>
+        </view>
+    </block>
+</view>  

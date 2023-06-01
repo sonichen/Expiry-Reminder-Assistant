@@ -1,0 +1,82 @@
+{
+  "pages":[
+    
+    
+    "pages/home/home",
+    "pages/create/create",
+    "pages/management/management",
+    "pages/my/my",
+    "pages/ownclass/ownclass",
+    "pages/setting/setting",
+    "pages/voice/voice",
+    "pages/advice/advice",
+    "pages/exdata/exdata",
+    "pages/components/timePicker",
+
+    "pages/my-guide/my-guide",
+    "pages/aboutus/aboutus",
+
+    "pages/home-edit/home-edit",
+    "pages/home-search/home-search",
+
+    "pages/statistics/statistics"
+
+    
+  
+
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#9CB8B3",
+    "navigationBarTitleText": "Re",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#F1FFFD",
+    "onReachBottomDistance": 50
+  },
+
+  "tabBar": {
+    "list":[
+        {
+            "pagePath": "pages/home/home",
+            "text": "首页",
+            "iconPath": "/images/home.png",
+            "selectedIconPath": "/images/home-active.png"
+        },
+        {
+            "pagePath": "pages/create/create",
+            "text":"创建",
+            "iconPath": "/images/create.png",
+            "selectedIconPath": "/images/create-active.png"
+        },
+        {
+            "pagePath": "pages/statistics/statistics",
+            "text":"数据",
+            "iconPath": "/images/statistic.png",
+            "selectedIconPath": "/images/statistic-active.png"
+        },
+        {
+          "pagePath": "pages/management/management",
+          "text":"管理",
+          "iconPath": "/images/class.png",
+          "selectedIconPath": "/images/class-active.png"
+          },
+           {
+          "pagePath": "pages/my/my",
+          "text":"我的",
+          "iconPath": "/images/my.png",
+          "selectedIconPath": "/images/my-active.png"
+          }
+    ],
+    "backgroundColor": "#F1FFFD",
+    "selectedColor": "#53A774"
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.5",
+      "provider": "wx069ba97219f66d99"
+    }}
+
+}

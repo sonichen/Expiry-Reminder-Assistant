@@ -1,0 +1,99 @@
+<!--pages/home-edit/home-edit.wxml-->
+<view class="create">
+    <text class="text">物品名称 | </text>
+    <input class="text2" name="userName" placeholder="请输入物品名称" auto-focus="true" bindinput="getThingName">
+    </input>
+    <image src="http://8.130.8.164:8080/img/re/resource/right.png" bindtap="showModal1"></image>
+</view>
+
+ <!-- 物品名称下拉框  -->
+ <view class="modal modal-bottom-dialog" hidden="{{hideFlag1}}">
+    <view class="modal-cancel" bindtap="hideModal1"></view>
+    <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+      <!--  -->
+      <view class='Mselect'>
+        <view class="modeltext" wx:for="{{optionList}}"   wx:key="unique" data-value='{{item}}' bindtap='getOption1'>
+          {{item}}
+        </view>
+      </view>
+      <view></view>
+      <view class='Mcancel' bindtap='mCancel1'>
+        <text class="modeltext">取消</text>
+      </view>
+
+    </view>
+  </view>
+
+
+<!-- 物品类别----------------------------------  -->
+<view class="create">
+    <text class="text" >类别 |</text>
+    <text class="text2" bindtap="showModal2">{{value2}}</text>
+    <image src="http://8.130.8.164:8080/img/re/resource/right.png" bindtap="showModal2"></image>
+</view>
+
+<!-- 类别名称下拉框  -->
+<view class="modal modal-bottom-dialog" hidden="{{hideFlag2}}">
+    <view class="modal-cancel" bindtap="hideModal2"></view>
+    <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+      <!--  -->
+      <view class='Mselect'>
+        <view class="modeltext" bindtap='getOption2' wx:for="{{classname}}"  wx:for-item="item" wx:for-index="index" wx:key="that" data-value='{{item.name}}'>
+          {{item.name}}
+        </view>
+      </view>
+      <view></view>
+      <view class='Mcancel' bindtap='mCancel2'>
+        <text class="modeltext">取消</text>
+      </view>
+
+    </view>
+    
+</view>
+
+<!-- -----------------提醒时间-----------------------  -->
+
+<view class="create">
+    <text class="text">临期提醒 | </text>
+    <view class="text2">
+        <time-picker mode="{{mode}}" class="picker" placeholder="请选择时间" bind:onPickerChange="onPickerChange1">
+        </time-picker>
+    </view>
+    <image src="http://8.130.8.164:8080/img/re/resource/right.png" hideFlag="true"></image>
+</view>
+
+
+
+
+
+<!-- -----------------生产日期-----------------------  -->
+
+<view class="create">
+    <text class="text">到期提醒 | </text>
+    <view class="text2">
+        <time-picker mode="{{mode}}" class="picker" placeholder="请选择时间" bind:onPickerChange="onPickerChange2">
+        </time-picker>
+    </view>
+    <image src="http://8.130.8.164:8080/img/re/resource/calendar.png"></image>
+</view>
+
+
+
+
+<view class="create">
+    <text class="text">备注 | </text>
+    <input class="input" name="userName" placeholder="请输入备注内容"  value='{{content}}' bindinput="getdescription">
+    </input>
+    <image src="http://8.130.8.164:8080/img/re/resource/voice.png"  bindtouchstart="touchStart" bindtouchend="touchEnd" ></image>
+
+</view>
+
+<!-- 开始语音 弹出语音图标表示正在录音 -->
+<cover-view class="startYuyinImage" wx:if="{{recordState == true}}">
+    <cover-image src="http://8.130.8.164:8080/img/re/resource/voice.png"></cover-image>
+    <cover-view>开始语音</cover-view>
+  </cover-view>
+
+
+<button class="btn"  bindtap='jumpToDetail'>确定</button>
+
